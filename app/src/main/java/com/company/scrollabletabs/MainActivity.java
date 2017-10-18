@@ -39,8 +39,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupViewPager(ViewPager viewPager) {
+        Bundle bundle=new Bundle();
+        bundle.putString("name", "DON");
+
+        OneFragment fragmentOne = new OneFragment();
+        fragmentOne.setArguments(bundle);
+
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new OneFragment(), "ONE");
+        adapter.addFragment(fragmentOne, "ONE");
         adapter.addFragment(new TwoFragment(), "TWO");
 
         viewPager.setAdapter(adapter);
@@ -77,3 +83,4 @@ public class MainActivity extends AppCompatActivity {
 }
 
 //Link : https://www.androidhive.info/2015/09/android-material-design-working-with-tabs/
+//link : https://stackoverflow.com/questions/18949746/how-to-send-data-from-activity-to-fragment
