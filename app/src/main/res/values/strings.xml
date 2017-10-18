@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ScrollableTabs</string>
+    <string name="one">One</string>
 </resources>
